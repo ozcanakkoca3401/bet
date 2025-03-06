@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  
+
+  Created by Ozcan Akkoca on 7.01.2024.
+  
+*/
+
+// General
+"general_ok_button" = "Tamam";
+"general_warning" = "Uyarı";
+"general_empty_cart" = "Devam etmek için oran seçin";
+
+// Home
+"home_title" = "Bilyoner";
+"home_search" = "Ara";
+"home_match" = "Maç";
+
+// Cart
+"cart_title" = "Kuponum";
+"cart_price" = "Fiyat";
+"cart_play" = "Hemen Oyna";
+"cart_total" = "Toplam";
+"cart_congratulations" = "Tebrikler";
+"cart_created" = "Kuponlarınız başarı ile oluşturuldu";

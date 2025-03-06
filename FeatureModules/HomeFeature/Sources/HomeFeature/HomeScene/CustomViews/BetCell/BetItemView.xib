@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BetItemView" customModule="HomeFeature">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="134"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MvO-zK-RZP">
+                    <rect key="frame" x="0.0" y="0.0" width="205" height="134"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WaG-ia-Pee">
+                            <rect key="frame" x="0.0" y="0.0" width="205" height="134"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQu-Gh-r69">
+                                    <rect key="frame" x="6" y="6" width="193" height="122"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cnT-25-fo5">
+                                            <rect key="frame" x="0.0" y="0.0" width="193" height="122"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bq9-Kx-SrQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="193" height="122"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFf-VR-IUE">
+                                            <rect key="frame" x="0.0" y="0.0" width="193" height="122"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="IFf-VR-IUE" secondAttribute="trailing" id="3eh-3v-LWb"/>
+                                        <constraint firstAttribute="trailing" secondItem="cnT-25-fo5" secondAttribute="trailing" id="Gha-bM-D8k"/>
+                                        <constraint firstItem="cnT-25-fo5" firstAttribute="leading" secondItem="zQu-Gh-r69" secondAttribute="leading" id="HUt-0P-3nx"/>
+                                        <constraint firstAttribute="bottom" secondItem="cnT-25-fo5" secondAttribute="bottom" id="NoU-vE-j1b"/>
+                                        <constraint firstItem="IFf-VR-IUE" firstAttribute="leading" secondItem="zQu-Gh-r69" secondAttribute="leading" id="RH6-Wa-Dqi"/>
+                                        <constraint firstItem="cnT-25-fo5" firstAttribute="top" secondItem="zQu-Gh-r69" secondAttribute="top" id="ZFM-6Q-vd1"/>
+                                        <constraint firstItem="IFf-VR-IUE" firstAttribute="top" secondItem="zQu-Gh-r69" secondAttribute="top" id="bDZ-xN-eQf"/>
+                                        <constraint firstAttribute="bottom" secondItem="IFf-VR-IUE" secondAttribute="bottom" id="cj2-Be-mHF"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="zQu-Gh-r69" secondAttribute="bottom" constant="6" id="6Mk-L1-nf7"/>
+                                <constraint firstItem="zQu-Gh-r69" firstAttribute="leading" secondItem="WaG-ia-Pee" secondAttribute="leading" constant="6" id="J5a-dT-vp9"/>
+                                <constraint firstAttribute="trailing" secondItem="zQu-Gh-r69" secondAttribute="trailing" constant="6" id="Jkr-Rx-vZI"/>
+                                <constraint firstItem="zQu-Gh-r69" firstAttribute="top" secondItem="WaG-ia-Pee" secondAttribute="top" constant="6" id="daa-vF-7CD"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="MvO-zK-RZP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ioi-44-LFR"/>
+                <constraint firstAttribute="bottom" secondItem="MvO-zK-RZP" secondAttribute="bottom" id="LpY-fr-MSL"/>
+                <constraint firstItem="MvO-zK-RZP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="d21-rI-6R7"/>
+                <constraint firstItem="MvO-zK-RZP" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="rCw-pU-LZs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="oddBackgroundView" destination="zQu-Gh-r69" id="Q6V-RK-PE9"/>
+                <outlet property="oddButton" destination="IFf-VR-IUE" id="aNX-cj-R0L"/>
+                <outlet property="oddLabel" destination="Bq9-Kx-SrQ" id="lyK-HS-WNk"/>
+            </connections>
+            <point key="canvasLocation" x="-64.885496183206101" y="-254.22535211267606"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
