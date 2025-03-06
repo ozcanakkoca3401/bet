@@ -33,6 +33,7 @@ Sends firebase analytics events for:
 - Qualified, clean code
 
 ### Technologies & Patterns
+- AutoLayout usage - Programmatically Screens
 - RxSwift, RxCocoa for reactive programming
 - Design Patterns: Factory, Singleton
 - Unit Tests coverage
@@ -47,6 +48,7 @@ Sends firebase analytics events for:
 - CoreResource
 - RxSwift/RxCocoa
 - Alamofire
+- Firebase 
 
 ## Testing
 Comprehensive unit tests for:
