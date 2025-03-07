@@ -46,7 +46,6 @@
 		696B4CF62D4930BC0046CB40 /* AppCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		696B4CF72D4930BC0046CB40 /* AppCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EB6B452D4E6E68004937C7 /* HomeFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HomeFeature; sourceTree = "<group>"; };
-		69FCA0362D7AC9E500518539 /* CartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +162,6 @@
 				696B4CF52D4930BC0046CB40 /* AppCore.app */,
 				696B4CF62D4930BC0046CB40 /* AppCoreTests.xctest */,
 				696B4CF72D4930BC0046CB40 /* AppCoreUITests.xctest */,
-				69FCA0362D7AC9E500518539 /* CartUseCase.swift */,
 			);
 			sourceTree = "<group>";
 		};
