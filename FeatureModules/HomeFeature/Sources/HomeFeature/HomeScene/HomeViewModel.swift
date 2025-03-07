@@ -99,7 +99,6 @@ extension HomeViewModel: HomeViewModelProtocol {
             }, onError: { [weak self] (error) in
                 self?.isLoading.accept(false)
                 self?.error.onNext(error.localizedDescription)
-                print(error)
             }).disposed(by: disposeBag)
     }
     
@@ -154,13 +153,11 @@ private extension HomeViewModel {
                 guard let self = self else { return }
                 self.isLoading.accept(false)
                 self.error.onNext(nil)
-                print(response)
                 
                 self.oddsItemPresentations.accept(response.map { BetTableViewCellPresentation(with: $0) })
             }, onError: { [weak self] (error) in
                 self?.isLoading.accept(false)
                 self?.error.onNext(error.localizedDescription)
-                print(error)
             }).disposed(by: disposeBag)
     }
     

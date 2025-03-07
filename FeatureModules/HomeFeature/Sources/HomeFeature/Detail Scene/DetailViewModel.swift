@@ -56,7 +56,6 @@ extension DetailViewModel: DetailViewModelProtocol {
                 guard let self = self else { return }
                 self.isLoading.accept(false)
                 self.error.onNext(nil)
-                print(response)
                 self.title.onNext("\(response.homeTeam ?? .emptyValue) - \(response.awayTeam ?? .emptyValue)")
                 
                 let betTableViewCellPresentations = (response.bookmakers ?? []).map { bookmaker in
@@ -80,7 +79,6 @@ extension DetailViewModel: DetailViewModelProtocol {
             }, onError: { [weak self] (error) in
                 self?.isLoading.accept(false)
                 self?.error.onNext(error.localizedDescription)
-                print(error)
             }).disposed(by: disposeBag)
     }
     
