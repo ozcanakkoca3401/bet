@@ -34,10 +34,13 @@ final class CartViewModel {
     
     private let router: CartRouterProtocol
     private let disposeBag: DisposeBag
+    private let useCase: CartUseCaseProtocol
     
     init(router: CartRouter,
+         useCase: CartUseCaseProtocol = CartUseCase(),
          disposeBag: DisposeBag = DisposeBag()) {
         self.router = router
+        self.useCase = useCase
         self.disposeBag = disposeBag
     }
     
@@ -47,7 +50,7 @@ final class CartViewModel {
 // MARK: - CartViewModelProtocol
 extension CartViewModel: CartViewModelProtocol {
     func loadData() {
-        let items = ManagerFactory.makeSelectionManager().getSelectedItems()
+        let items = useCase.loadItems()
         oddsItemPresentations.accept(items)
         if items.isEmpty {
             router.dismiss()
@@ -58,9 +61,8 @@ extension CartViewModel: CartViewModelProtocol {
     }
     
     func deleteItem(at index: Int) {
-        ManagerFactory.makeSelectionManager().deleteItem(at: index)
+        useCase.deleteItem(at: index)
         ManagerFactory.makeAnalyticsManager().logEvent(name: AnalyticsManager.EventName.removeFromCart, params: nil)
-
         loadData()
     }
     
@@ -77,9 +79,8 @@ extension CartViewModel: CartViewModelProtocol {
 // MARK: - Methods
 private extension CartViewModel {
     func calculateTotalAmount() {
-        let totalOdds = ManagerFactory.makeSelectionManager().getSelectedItems().compactMap({ Double($0.odd)}).reduce(0, +)
         let currentPrice = Double(price.value) ?? 30
-        let calculatedAmount = (totalOdds * currentPrice).rounded(toPlaces: 5)
+        let calculatedAmount = useCase.calculateTotalAmount(price: currentPrice)
         totalAmount.accept(calculatedAmount)
     }
 }

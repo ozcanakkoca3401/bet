@@ -62,12 +62,15 @@ final class HomeViewModel {
     private let router: HomeRouterProtocol
     private let service: HomeRepositoryProtocol
     private let disposeBag: DisposeBag
-
+    private let calculateOddsUseCase: CalculateOddsUseCaseProtocol
+    
     init(router: HomeRouterProtocol,
          service: HomeRepositoryProtocol,
+         calculateOddsUseCase: CalculateOddsUseCaseProtocol = CalculateOddsUseCase(),
          disposeBag: DisposeBag = DisposeBag()) {
         self.router = router
         self.service = service
+        self.calculateOddsUseCase = calculateOddsUseCase
         self.disposeBag = disposeBag
         addObservers()
     }
@@ -210,10 +213,7 @@ private extension HomeViewModel {
     }
     
     func calculateSelectedItems() {
-        let items = ManagerFactory.makeSelectionManager().getSelectedItems()
-        self.selectedItemsCount.accept("\(items.count) \(CoreLocalize.Home.Match)")
-        
-        let totalOdds = ManagerFactory.makeSelectionManager().getSelectedItems().compactMap({ Double($0.odd)}).reduce(0, +)
-        self.totalOddsRatio.accept(String(format: "%.2f", totalOdds))
+        self.selectedItemsCount.accept(calculateOddsUseCase.calculateSelectedItemsCount())
+        self.totalOddsRatio.accept(calculateOddsUseCase.calculateTotalOddsRatio())
     }
 }

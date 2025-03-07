@@ -23,6 +23,10 @@ Sends firebase analytics events for:
 - MVVM (Model-View-ViewModel)
 - Clean Architecture principles
 
+## Use Cases
+- CartUseCase
+- CalculateOddsUseCase
+
 ## Technical Requirements
 
 ### Must Have
